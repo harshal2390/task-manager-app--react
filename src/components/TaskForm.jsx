@@ -3,7 +3,7 @@ import { useState } from "react";
 function TaskForm({ addTask }) {
   const [task, setTask] = useState("");
   const [priority, setPriority] = useState("Low");
-  const [category, setCategory] = useState("study");
+  const [category, setCategory] = useState("Study");
 
   const handleSubmit = (e) => {
     e.preventDefault();
