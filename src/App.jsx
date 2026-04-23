@@ -4,10 +4,12 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen bg-gray-100">
       <Navbar />
-      <Home />
-    </>
+      <main className="py-6">
+        <Home />
+      </main>
+    </div>
   );
 }
 
