@@ -78,9 +78,7 @@ function Home() {
         ))}
 
         {tasks.length === 0 && (
-          <p className="text-center text-gray-500 mt-6">
-            No tasks yet. Add your first task above! ✨
-          </p>
+          <p className="text-center text-gray-500 mt-6">No tasks yet</p>
         )}
       </ul>
     </div>
