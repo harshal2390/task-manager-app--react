@@ -33,10 +33,8 @@ function Home() {
         Welcome to Smart Task Manager
       </h2>
 
-      {/* Task Form */}
       <TaskForm addTask={addTask} />
 
-      {/* Task List */}
       <ul className="mt-8 space-y-4">
         {tasks.map((task) => (
           <li
@@ -53,7 +51,6 @@ function Home() {
             </div>
 
             <div className="flex items-center gap-3">
-              {/* Priority Badge */}
               <span
                 className={`px-3 py-1 rounded-full text-sm font-semibold ${
                   task.priority === "High"
@@ -66,12 +63,10 @@ function Home() {
                 {task.priority}
               </span>
 
-              {/* Category Badge */}
               <span className="px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 font-medium">
                 {task.category}
               </span>
 
-              {/* Delete Button */}
               <button
                 onClick={() => deleteTask(task.id)}
                 className="text-white bg-red-600 hover:bg-red-700 px-3 py-1 rounded-md text-sm font-semibold transition"
@@ -82,11 +77,8 @@ function Home() {
           </li>
         ))}
 
-        {/* Empty State */}
         {tasks.length === 0 && (
-          <p className="text-center text-gray-500 mt-6">
-            No tasks yet. Add your first task above! ✨
-          </p>
+          <p className="text-center text-gray-500 mt-6">No tasks yet</p>
         )}
       </ul>
     </div>
